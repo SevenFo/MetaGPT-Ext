@@ -1,0 +1,2 @@
+2025-03-29 17:00:59.457 | DEBUG    | metagpt.core.provider.base_llm:aask:203 - [{'role': 'system', 'content': 'You are a helpful assistant.'}, {'role': 'user', 'content': 'who are you?'}]
+2025-03-29 17:00:59.457 | DEBUG    | metagpt.core.provider.base_llm:aask:203 - [{'role': 'system', 'content': 'You are a helpful assistant.'}, {'role': 'user', 'content': 'who are you?'}]
