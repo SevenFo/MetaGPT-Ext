@@ -5,9 +5,9 @@
 from typing import AsyncGenerator, Union
 
 from dashscope.api_entities.dashscope_response import (
-    GenerationResponse,
     DashScopeAPIResponse,
     GenerationOutput,
+    GenerationResponse,
     GenerationUsage,
 )
 

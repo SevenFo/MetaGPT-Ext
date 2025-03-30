@@ -23,7 +23,6 @@ from dashscope.common.error import (
     ModelRequired,
     UnsupportedApiProtocol,
 )
-
 from metagpt.core.const import USE_CONFIG_TIMEOUT
 from metagpt.core.logs import log_llm_stream
 from metagpt.core.provider.base_llm import BaseLLM, LLMConfig

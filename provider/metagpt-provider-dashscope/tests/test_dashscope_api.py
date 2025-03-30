@@ -3,16 +3,15 @@
 # @Desc   : the unittest of DashScopeLLM
 
 import pytest
-
 from metagpt.provider.dashscope import DashScopeLLM
 from tests.mock_llm_config import mock_llm_config_dashscope
 from tests.req_resp_const import (
     llm_general_chat_funcs_test,
     messages,
+    mock_dashscope_acall,
+    mock_dashscope_call,
     prompt,
     resp_cont,
-    mock_dashscope_call,
-    mock_dashscope_acall,
 )
 
 
