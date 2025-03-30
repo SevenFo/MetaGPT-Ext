@@ -5,22 +5,21 @@ Test for volcengine Ark Python SDK V3
 API docs: https://www.volcengine.com/docs/82379/1263482
 """
 
-from typing import AsyncIterator, List, Union
+from typing import Union
 
 import pytest
-from openai.types.chat import ChatCompletion, ChatCompletionChunk
-
 from metagpt.provider.ark import ArkLLM
+from openai.types.chat import ChatCompletion, ChatCompletionChunk
 from tests.mock_llm_config import mock_llm_config_ark
 from tests.req_resp_const import (
-    create_chat_completion_chunk,
+    USAGE,
     chunk_iterator,
+    create_chat_completion_chunk,
     get_openai_chat_completion,
     llm_general_chat_funcs_test,
     messages,
     prompt,
     resp_cont_tmpl,
-    USAGE,
 )
 
 # Setup test data

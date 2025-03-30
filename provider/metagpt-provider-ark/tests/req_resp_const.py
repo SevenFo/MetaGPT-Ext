@@ -4,18 +4,17 @@
 Default request & response data for provider unittest
 """
 
-from typing import AsyncIterator, List, Union
+from typing import AsyncIterator, List
 
+from metagpt.core.provider.base_llm import BaseLLM
 from openai.types.chat import ChatCompletion, ChatCompletionChunk
 from openai.types.chat.chat_completion import Choice
+from openai.types.chat.chat_completion_chunk import Choice as ChunkChoice
+from openai.types.chat.chat_completion_chunk import ChoiceDelta
 
 # Fix import for OpenAI 1.64.0 compatibility
 from openai.types.chat.chat_completion_message import ChatCompletionMessage
-from openai.types.chat.chat_completion_chunk import Choice as ChunkChoice
-from openai.types.chat.chat_completion_chunk import ChoiceDelta
 from openai.types.completion_usage import CompletionUsage
-
-from metagpt.core.provider.base_llm import BaseLLM
 
 # Common test data
 prompt = "who are you?"
