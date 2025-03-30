@@ -6,7 +6,6 @@ from typing import List, Literal
 
 import boto3
 from botocore.eventstream import EventStream
-
 from metagpt.core.configs.llm_config import LLMConfig, LLMType
 from metagpt.core.const import USE_CONFIG_TIMEOUT
 from metagpt.core.logs import log_llm_stream, logger

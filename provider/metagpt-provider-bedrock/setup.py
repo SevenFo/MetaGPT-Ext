@@ -2,7 +2,8 @@
 # -*- coding: utf-8 -*-
 
 import os
-from setuptools import setup, find_namespace_packages
+
+from setuptools import find_namespace_packages, setup
 
 here = os.path.abspath(os.path.dirname(__file__))
 

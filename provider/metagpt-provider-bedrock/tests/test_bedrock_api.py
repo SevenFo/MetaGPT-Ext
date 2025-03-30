@@ -5,14 +5,13 @@ Test cases for AWS Bedrock provider.
 """
 
 import json
-import pytest
-from unittest.mock import AsyncMock
 
+import pytest
+from metagpt.provider.bedrock import BedrockLLM
 from metagpt.provider.bedrock.utils import (
     NOT_SUPPORT_STREAM_MODELS,
     SUPPORT_STREAM_MODELS,
 )
-from metagpt.provider.bedrock import BedrockLLM
 from tests.mock_llm_config import mock_llm_config_bedrock
 from tests.req_resp_const import (
     BEDROCK_PROVIDER_REQUEST_BODY,
