@@ -11,8 +11,8 @@ import pytest
 from openai.types.chat import ChatCompletion, ChatCompletionChunk
 
 from metagpt.provider.ark import ArkLLM
-from tests.metagpt.provider.mock_llm_config import mock_llm_config_ark
-from tests.metagpt.provider.req_resp_const import (
+from tests.mock_llm_config import mock_llm_config_ark
+from tests.req_resp_const import (
     create_chat_completion_chunk,
     chunk_iterator,
     get_openai_chat_completion,

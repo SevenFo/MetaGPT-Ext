@@ -23,7 +23,8 @@ setup(
     author="MetaGPT Team",
     author_email="metagpt@deepwisdom.ai",
     url="https://github.com/metagpt-ext/provider/metagpt-provider-ark",
-    packages=find_namespace_packages(include=["metagpt.*"]),
+    # 修改包含逻辑，明确排除tests目录下的包
+    packages=find_namespace_packages(include=["metagpt.*"], exclude=["*.tests", "*.tests.*", "tests.*", "tests"]),
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Programming Language :: Python :: 3",
