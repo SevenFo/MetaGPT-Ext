@@ -3,7 +3,6 @@
 
 from anthropic import AsyncAnthropic
 from anthropic.types import Message, Usage
-
 from metagpt.core.configs.llm_config import LLMConfig, LLMType
 from metagpt.core.const import USE_CONFIG_TIMEOUT
 from metagpt.core.logs import log_llm_stream

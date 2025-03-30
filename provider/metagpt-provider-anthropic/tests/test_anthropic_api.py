@@ -6,7 +6,6 @@ Test for the Anthropic (Claude) provider
 
 import pytest
 from anthropic.resources.completions import Completion
-
 from metagpt.provider.anthropic import AnthropicLLM
 from tests.mock_llm_config import mock_llm_config_anthropic
 from tests.req_resp_const import (

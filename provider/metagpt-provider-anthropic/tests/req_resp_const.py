@@ -5,14 +5,13 @@ Default request & response data for provider unittest
 """
 
 from anthropic.types import (
-    MessageStartEvent,
+    ContentBlockDeltaEvent,
     Message,
+    MessageStartEvent,
     TextBlock,
     TextDelta,
-    ContentBlockDeltaEvent,
 )
 from anthropic.types import Usage as AnthropicUsage
-
 from metagpt.core.provider.base_llm import BaseLLM
 
 # Common test data
