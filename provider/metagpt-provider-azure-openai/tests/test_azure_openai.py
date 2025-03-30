@@ -4,20 +4,17 @@
 Test file for the Azure OpenAI provider.
 """
 
-import pytest
-from unittest.mock import patch
 from typing import AsyncIterator, List, Union
 
-from openai.types.chat import ChatCompletion, ChatCompletionChunk
-from openai.types.chat.chat_completion import Choice, CompletionUsage
-from openai.types.chat.chat_completion_message import ChatCompletionMessage
-from openai.types.chat.chat_completion_chunk import Choice as ChunkChoice
-from openai.types.chat.chat_completion_chunk import ChoiceDelta
-
+import pytest
 from metagpt.core.configs.llm_config import LLMConfig, LLMType
 from metagpt.core.provider.base_llm import BaseLLM
 from metagpt.provider.azure_openai import AzureOpenAILLM
-
+from openai.types.chat import ChatCompletion, ChatCompletionChunk
+from openai.types.chat.chat_completion import Choice, CompletionUsage
+from openai.types.chat.chat_completion_chunk import Choice as ChunkChoice
+from openai.types.chat.chat_completion_chunk import ChoiceDelta
+from openai.types.chat.chat_completion_message import ChatCompletionMessage
 
 # 测试数据常量
 name = "Azure AI assistant"

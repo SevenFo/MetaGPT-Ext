@@ -4,8 +4,8 @@
 Setup file for the metagpt-provider-azure-openai package.
 """
 
-import os
-from setuptools import setup, find_namespace_packages
+
+from setuptools import find_namespace_packages, setup
 
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()

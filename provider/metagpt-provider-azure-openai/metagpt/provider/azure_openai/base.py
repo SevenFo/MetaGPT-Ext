@@ -6,12 +6,11 @@
 @Desc    : Azure OpenAI LLM provider implementation
 """
 
-from openai import AsyncAzureOpenAI
-from openai._base_client import AsyncHttpxClientWrapper
-
 from metagpt.core.configs.llm_config import LLMType
 from metagpt.core.provider.llm_provider_registry import register_provider
 from metagpt.provider.openai.openai_api import OpenAILLM
+from openai import AsyncAzureOpenAI
+from openai._base_client import AsyncHttpxClientWrapper
 
 
 @register_provider(LLMType.AZURE)
