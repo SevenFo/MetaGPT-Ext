@@ -7,7 +7,6 @@ from dataclasses import dataclass
 import pytest
 from google.ai import generativelanguage as glm
 from google.generativeai.types import content_types
-
 from metagpt.provider.google_gemini import GeminiLLM
 from tests.mock_llm_config import mock_llm_config
 from tests.req_resp_const import (
