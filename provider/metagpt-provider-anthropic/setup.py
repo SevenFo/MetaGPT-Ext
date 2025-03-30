@@ -18,7 +18,7 @@ setup(
     author="MetaGPT Team",
     author_email="contact@deepwisdom.ai",
     url="https://github.com/geekan/MetaGPT-Ext",
-    packages=find_namespace_packages(include=["metagpt.*"]),
+    packages=find_namespace_packages(include=["metagpt.*"], exclude=["*.tests", "*.tests.*", "tests.*", "tests"]),
     install_requires=required,
     python_requires=">=3.9",
     classifiers=[

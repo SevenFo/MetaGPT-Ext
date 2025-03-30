@@ -20,18 +20,40 @@ wheels/
 .installed.cfg
 *.egg
 
-# IDE
-.idea/
-.vscode/
-*.sublime-project
-*.sublime-workspace
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
 
-# Environment
+# Test logs
+test_logs/
+
+# Environments
 .env
 .venv
 env/
 venv/
 ENV/
+env.bak/
+venv.bak/
 
-# Logs
-*.log
+# VS Code
+.vscode/
+*.code-workspace
+
+# PyCharm
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Jupyter Notebook
+.ipynb_checkpoints
