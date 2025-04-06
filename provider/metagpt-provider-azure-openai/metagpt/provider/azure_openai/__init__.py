@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
 """
 @Time    : 2024/08/18
 @Author  : MetaGPT Team

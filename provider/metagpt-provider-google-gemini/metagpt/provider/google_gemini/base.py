@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
 # @Desc   : Google Gemini LLM from https://ai.google.dev/tutorials/python_quickstart
 import json
 import os

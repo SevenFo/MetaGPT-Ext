@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
 # @Desc   : the unittest of google gemini api
 from abc import ABC
 from dataclasses import dataclass

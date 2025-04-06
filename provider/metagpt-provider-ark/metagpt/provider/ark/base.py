@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
 """
 Provider for volcengine.
 See Also: https://console.volcengine.com/ark/region:ark+cn-beijing/model

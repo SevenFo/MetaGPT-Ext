@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
 # @Desc   : default request & response data for provider unittest
 
 from metagpt.core.provider.base_llm import BaseLLM

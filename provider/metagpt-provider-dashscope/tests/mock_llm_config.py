@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
 # @Desc   : mock LLM configs
 
 from metagpt.core.provider.base_llm import LLMConfig

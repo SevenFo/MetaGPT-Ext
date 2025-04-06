@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
 
 from anthropic import AsyncAnthropic
 from anthropic.types import Message, Usage

@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
 """
 Test for volcengine Ark Python SDK V3
 API docs: https://www.volcengine.com/docs/82379/1263482
