@@ -13,9 +13,11 @@ pip install metagpt-provider-google-gemini
 ### Basic Usage
 
 ```python
+import asyncio
 from metagpt.core.configs.llm_config import LLMConfig
 from metagpt.provider.google_gemini import GeminiLLM
 
+# Configure the LLM
 config = LLMConfig(
     api_type="gemini",
     api_key="your_gemini_api_key",
@@ -29,13 +31,18 @@ response = llm.ask("What is artificial intelligence?")
 print(response)
 
 # Asynchronous API
-async def ask_gemini():
+async def main():
+    # Simple async response
     response = await llm.aask("What is artificial intelligence?")
     print(response)
     
     # Stream response
     async for chunk in llm.aask_stream("Tell me a short story about AI."):
         print(chunk, end="")
+
+# Run the async function
+if __name__ == "__main__":
+    asyncio.run(main())
 ```
 
 ### Environment Variables

@@ -11,22 +11,23 @@ pip install metagpt-provider-dashscope
 ## Usage
 
 ```python
+import asyncio
 from metagpt.provider.dashscope import DashScopeLLM
 from metagpt.core.provider.base_llm import LLMConfig
 
-# Configure the DashScope LLM
-config = LLMConfig(
-    model="qwen-max",  # or other available models: "qwen-plus", "qwen-max", etc.
-    api_key="your-dashscope-api-key",
-    temperature=0.7,
-)
-
-# Create the DashScope LLM instance
-llm = DashScopeLLM(config)
-
-# Async usage
 async def main():
-    response = await llm.aask("Hello, how are you?")
+    # Configure the DashScope LLM
+    config = LLMConfig(
+        model="qwen-max",  # or other available models: "qwen-plus", "qwen-max", etc.
+        api_key="your-dashscope-api-key",
+        temperature=0.7,
+    )
+
+    # Create the DashScope LLM instance
+    llm = DashScopeLLM(config)
+    
+    # Simple async response
+    response = await llm.aask("What is artificial intelligence?")
     print(response)
     
     # For chat completion with messages
@@ -35,14 +36,10 @@ async def main():
     ]
     response = await llm.acompletion_text(messages)
     print(response)
-    
-    # For streaming response
-    response = await llm.acompletion_text(messages, stream=True)
-    print(response)
 
 # Run the async function
-import asyncio
-asyncio.run(main())
+if __name__ == "__main__":
+    asyncio.run(main())
 ```
 
 ## Supported Models

@@ -47,22 +47,27 @@ llm:
 ## Usage
 
 ```python
+import asyncio
 from metagpt.provider.bedrock import BedrockLLM
 from metagpt.core.configs.llm_config import LLMConfig, LLMType
 
-# Configure the provider
-config = LLMConfig(
-    api_type=LLMType.BEDROCK,
-    model="anthropic.claude-3-sonnet-20240229-v1:0",
-    access_key="your-access-key",
-    secret_key="your-secret-key",
-    region_name="us-east-1",
-)
+async def main():
+    # Configure the provider
+    config = LLMConfig(
+        api_type=LLMType.BEDROCK,
+        model="anthropic.claude-3-sonnet-20240229-v1:0",
+        access_key="your-access-key",
+        secret_key="your-secret-key",
+        region_name="us-east-1",
+    )
+    
+    # Initialize the provider
+    llm = BedrockLLM(config)
+    
+    # Use the provider
+    response = await llm.aask("What is AWS Bedrock?")
+    print(response)
 
-# Initialize the provider
-llm = BedrockLLM(config)
-
-# Use the provider
-response = await llm.aask("What is AWS Bedrock?")
-print(response)
+if __name__ == "__main__":
+    asyncio.run(main())
 ```

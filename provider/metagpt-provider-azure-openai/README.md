@@ -25,23 +25,29 @@ llm:
 ## Usage
 
 ```python
+import asyncio
 from metagpt.core.configs.llm_config import LLMConfig
 from metagpt.provider.azure_openai import AzureOpenAILLM
 
-# Configure the LLM
-config = LLMConfig(
-    api_type="azure",
-    base_url="https://YOUR_RESOURCE_NAME.openai.azure.com",
-    api_key="YOUR_API_KEY",
-    api_version="2023-07-01-preview",
-    model="gpt-4"
-)
+async def main():
+    # Configure the LLM
+    config = LLMConfig(
+        api_type="azure",
+        base_url="https://YOUR_RESOURCE_NAME.openai.azure.com",
+        api_key="YOUR_API_KEY",
+        api_version="2023-07-01-preview",
+        model="gpt-4"
+    )
+    
+    # Create the LLM instance
+    llm = AzureOpenAILLM(config)
+    
+    # Use the LLM
+    response = await llm.aask("Hello, how are you?")
+    print(response)
 
-# Create the LLM instance
-llm = AzureOpenAILLM(config)
-
-# Use the LLM
-response = await llm.aask("Hello, how are you?")
+if __name__ == "__main__":
+    asyncio.run(main())
 ```
 
 ## Supported Models

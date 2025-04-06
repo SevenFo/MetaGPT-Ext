@@ -24,23 +24,28 @@ llm:
 ## Usage
 
 ```python
+import asyncio
 from metagpt.core.configs.llm_config import LLMConfig
 from metagpt.provider.ark import ArkLLM
 
-# Configure the LLM
-config = LLMConfig(
-    api_type="ark",
-    api_key="your_api_key",
-    base_url="https://ark.cn-beijing.volces.com/api/v3",
-    endpoint="your_endpoint"
-)
+async def main():
+    # Configure the LLM
+    config = LLMConfig(
+        api_type="ark",
+        api_key="your_api_key",
+        base_url="https://ark.cn-beijing.volces.com/api/v3",
+        endpoint="your_endpoint"
+    )
+    
+    # Create the LLM instance
+    llm = ArkLLM(config)
+    
+    # Use the LLM
+    response = await llm.aask("Hello, how are you?")
+    print(response)
 
-# Create the LLM instance
-llm = ArkLLM(config)
-
-# Use the LLM
-response = await llm.aask("Hello, how are you?")
-print(response)
+if __name__ == "__main__":
+    asyncio.run(main())
 ```
 
 ## Documentation
