@@ -13,7 +13,7 @@ pip install metagpt-provider-anthropic
 ```python
 import asyncio
 from metagpt.provider.anthropic import AnthropicLLM
-from metagpt.configs.llm_config import LLMConfig
+from metagpt.core.configs.llm_config import LLMConfig
 
 async def main():
     config = LLMConfig(
