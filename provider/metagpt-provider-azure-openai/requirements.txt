@@ -1,2 +1,3 @@
 metagpt-core>=1.0.0
 openai>=1.3.0
+metagpt-provider-openai>=1.0.0
